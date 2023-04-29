@@ -1,11 +1,13 @@
 
 .card{
-    margin: 20px 20px 20px 20px;
-    min-height: 400px;
+    margin: auto;
+    margin-bottom: 20px;
+    min-height: 320px;
     width: 300px;
     background-color: #333;
     border: 5px solid rgba(162, 0, 255, 0.548);
     box-shadow: 0 0 5px #000;
+    padding-bottom: 20px;
 }
 
 .card__image{
@@ -38,6 +40,7 @@
     border: 1px solid #000;
     border-radius: 25px;
     width: 50%;
+    height: auto;
     margin: auto;
     box-shadow: 0 0 5px #fff;
 }

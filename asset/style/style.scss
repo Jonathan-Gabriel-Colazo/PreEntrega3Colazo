@@ -3,7 +3,9 @@
 @use 'flex-box';
 @use 'card';
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     height: auto;
@@ -11,8 +13,9 @@ body {
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     color: #000;
-
 }
+
+
 
 
 .navbar {
@@ -89,7 +92,7 @@ body {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 200px);
+    grid-template-rows: repeat(10, 200px);
     padding: 20px;
     grid-gap: 15px;
 
@@ -122,26 +125,33 @@ body {
 
 .c2 {
     background-image: url(../images/img-02.jpg);
+    background-position:initial;
 }
 
 .c3 {
     background-image: url(../images/img-03.jpg);
 }
 
+
 .c4 {
     background-image: url(../images/img-04.jpg);
+    background-position:initial;
 }
+
 
 .c5 {
     background-image: url(../images/img-05.jpg);
+    background-position:initial;
 }
 
 .c6 {
     background-image: url(../images/img-06.jpg);
+
 }
 
 .c7 {
     background-image: url(../images/img-07.jpg);
+
 }
 
 .c8 {
@@ -152,7 +162,8 @@ body {
     background-image: url(../images/img-09.jpg);
 }
 
-h1 {
+.equipoH1 {
+    color: #2c0000;
     text-align: center;
     text-transform: capitalize;
     font-size: 50px;
@@ -162,14 +173,15 @@ h1 {
     margin: auto;
     width: 80vh;
     height: 70vh;
-
+    @include flex-box.flex-center;
 
 }
 
-.equipo img {
-    @include flex-box.flex-center;
-    width: 90%;
-    height: 70vh;
+.portada-equipo {
+    object-fit: cover;
+    margin: auto;
+    width: 80%;
+    height: auto;
     border: #000 solid 5px;
     border-radius: 10px;
     box-shadow: 0 0 5px #000;
@@ -196,8 +208,6 @@ h1 {
 
 #leoni {
     background-image: url(../images/equipo-04.jpeg);
-    background-position: top;
-
 }
 
 #galeria {
@@ -331,147 +341,167 @@ h1 {
     background-image: url(../images/gal-24.jpeg);
 }
 
-.box {
-    width: 3fr;
-    height: auto;
-    @include flex-box.flex-center;
-    flex-direction: column;
+.box-contacto {
+    width: 100%;
+    height: 400vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px, 500px 600px;
+    padding: 20px;
+    grid-gap: 15px;
     background-image: linear-gradient(to left, rgba(12, 201, 201, 0.589) 10%, rgba(255, 3, 121, 0.616) 80%, rgba(3, 112, 18, 0.5)10%);
 }
 
-.image {
-    width: 1fr;
-    background-image: url(../images/contacto-02.png);
+.box-1 img{
+    object-fit: cover;
+    width: 300px;
+    height: 100vh;
 }
 
-.image2 {
-    width: 1fr;
-    background-image: url(../images/contacto-01.png);
-}
-
-
-.contact_form {
-    width: 1fr;
-    height: auto;
+form {
     margin: auto;
+    @include flex-box.flex-center;
+    align-items: self-start;
+    flex-flow: column nowrap;
+    width: 60vh;
+    height: 850px;
+    margin: 10px 10px 10px 10px;
     border-radius: 10px;
     border: 2px solid #1476f6;
     padding-top: 30px;
     padding-bottom: 20px;
     background-color: #b78fd8;
     padding-left: 30px;
+
+
+    label{
+        font-size: 25px;
+        letter-spacing: 1px;
+        padding-top: 20px;
+    }
+
+    input{
+        border: 1px solid #fff;
+        border-radius: 10px;
+        background-color: #3333335e;
+    }
+    input:focus{
+        box-shadow:0 0 5px #0e0042;
+        border: #000;
+        background-color: #d8c0c0;
+        color:#050146
+    }
+    h2{
+        font-size: 25px;
+        padding-top: 20px;
+    }
+    select{
+        background-color: #3333335e;
+    }
+
+    option{
+        background-color: #3333335e;
+    }
+
+    .dia{
+        font-size: 18px;
+    }
+
+
+    #enviar{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+#enviar:hover{
+        background-color: #070030;
+        color:#8aa7ce
+}
+
 }
 
 
-input {
-    background-color: #fbfbfb;
-    width: 80%;
-    height: 40px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #ab4493;
-    margin-top: 10px;
-    padding-left: 10px;
+
+#map{
+    margin-top:30px;
+    padding-top: 30px;
+}
+
+.main{
+    height: auto;
+    background-image: linear-gradient(45deg, rgba(247, 241, 244, 0.589) 10%, rgba(255, 3, 121, 0.616) 80%, rgba(58, 2, 53, 0.5)10%);
+    @include imagenes-bak.imagenes-background;
+}
+
+.container-fluid{
+@include flex-box.flex-center;
+flex-flow: column;
+align-items: flex-start;
+}
+
+.col-xs-3{
+    @include flex-box.flex-center;
+}
+
+.col-xs-9 h2{
+    font-size: 30px;
+    color: #000;
+    text-transform: capitalize;
+    text-shadow: 0 0 5px #a8a8a8;
+    text-align: center;
     margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
-
-textarea {
-    background-color: #fbfbfb;
-    width: 80%;
-    height: 150px;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #ab4493;
-    margin-top: 10px;
-    padding-left: 10px;
+.col-xs-9 p{
     margin-bottom: 20px;
-    padding-top: 15px;
-}
-
-
-label {
-    display: block;
-    float: center;
-}
-
-
-button {
-    height: 45px;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    text-transform: uppercase;
-    background-color: #ab4493;
-    border-color: #ab4493;
-    border-style: solid;
-    border-radius: 10px;
-    width: 50%;
-    cursor: pointer;
-}
-
-
-button p {
-    color: #fff;
-}
-
-
-span {
-    color: #ab4493;
-}
-
-
-.aviso {
-    font-size: 13px;
-    color: #0e0e0e;
-}
-
-
-h1 {
-    font-size: 39px;
-    text-align: letf;
+    font-size: 15px;
+    color: #1a1515;
+    text-transform: capitalize;
+    text-shadow: 0 0 5px #a8a8a8;
+    text-align: center;
     padding-bottom: 20px;
+}
+
+.botones-scroll{
+    margin-top: 30px;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    background-color: #3adb3a46 !important;
+    color: #0f0b30e7;
+}
+
+
+.botones-scroll:hover{
+    background-color: #448dec75;
     color: #ab4493;
 }
 
 
-h3 {
-    font-size: 16px;
-    padding-bottom: 30px;
-    color: #0e0e0e;
+.img-clases{
+    width: 300px;
+    margin: auto;
+    padding-bottom: 10px;
 }
 
 
-p {
-    font-size: 14px;
-    color: #0e0e0e;
-}
-
-
-::-webkit-input-placeholder {
-    color: #a8a8a8;
-}
-
-
-::-webkit-textarea-placeholder {
-    color: #a8a8a8;
-}
-
-
-.formulario input:focus {
-    outline: 0;
-    border: 1px solid #97d848;
-}
-
-
-.formulario textarea:focus {
-    outline: 0;
-    border: 1px solid #97d848;
+.up{
+    height: 25px;
+    width: 25px;
+    background-color: #9c699a79;
+    color: #070030;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    border: 2px solid #000;
 }
 
 footer {
+    padding-top: 10px;
     background-color: #333;
     color: white;
     text-align: center;
@@ -491,9 +521,10 @@ footer {
     color: #1476f6;
 }
 
-.footer {
+footer p{
     color: white;
     text-transform: capitalize;
+    padding-bottom: 10px;
 }
 
 
@@ -510,6 +541,30 @@ footer {
 }
 
 @media only screen and (min-width:768px) {
+    .container-fluid{
+
+        @include flex-box.flex-center;
+        align-items: flex-start;
+        }
+    .box-contacto {
+        width: 100%;
+        height: 130vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1, 400px;
+    }
+    form {
+        width: auto;
+        height: auto;
+        margin: 10px 10px 10px 10px;
+        border-radius: 10px;
+        border: 2px solid #1476f6;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        background-color: #b78fd8;
+        padding-left: 30px;
+    }
+    
 
     .team-ub {
         width: 100%;
@@ -611,4 +666,60 @@ footer {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 200px);
     }
+
+    form {
+        margin: auto;
+        @include flex-box.flex-center;
+        align-items: self-start;
+        flex-flow: column nowrap;
+        width: 60vh;
+        height: 850px;
+    
+    
+        label{
+            font-size: 35px;
+        }
+        h2{
+            font-size: 35px;
+            padding-top: 20px;
+        }
+        .dia{
+            font-size: 25px;
+        }
+    }
+    
+    
+.up{
+    height: 50px;
+    width: 50px;
+    bottom: 30px;
+    right: 50px;
+    font-size: 35px;
+    line-height: 50px;
+    border-radius: 50%;
+}
+
+
+    .col-xs-9 p{
+        font-size: 25px;
+    }
+
+    .col-xs-9 h2{
+        font-size: 40px;
+    }
+
+    #botones-scroll{
+        font-size: 20px;
+    }
+
+.img-clases{
+    width: 100%;
+}
+
+    .box {
+        width: 3fr;
+        height: auto;
+        @include flex-box.flex-center;
+        flex-direction: row;
+    }    
 }

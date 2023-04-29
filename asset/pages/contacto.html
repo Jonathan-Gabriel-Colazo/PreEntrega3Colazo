@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/ico.ico" type="image/x-icon">
+    <meta name="keywords" content="salsa, mambo, hip hop, zumba, academia, stretching, dance, danza, calera, córdoba, flexibilidad, entrenamiento"/>
+    <meta name="description" content="contactanos, Urban-Dance La calera"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -40,11 +42,12 @@
                             Clases
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="../pages/contacto.html">Stretching</a>
-                            <a class="dropdown-item" href="../pages/contacto.html">iniciación en la danza</a>
-                            <a class="dropdown-item" href="../pages/contacto.html">Entrenemiento funcional</a>
-                            <a class="dropdown-item" href="../pages/contacto.html">Estilos contemporaneos</a>
-                    </li>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./clases.html#stretching">Stretching</a>
+                                <a class="dropdown-item" href="./clases.html#iniciciacion">iniciación en la danza</a>
+                                <a class="dropdown-item" href="./clases.html#entrenamiento">Entrenemiento funcional</a>
+                                <a class="dropdown-item" href="./clases.html#estilos">Estilos contemporaneos</a>
+                        </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../pages/galeria.html">Galeria</a>
                     </li>
@@ -59,63 +62,50 @@
     </header>
     <main>
         <h1>Programa Tu Clase</h1>
-        <div class="box">
-            <div data-aos="zoom-in-right" class="image"></div>
-            <form action="">
-                <div class="contact_form">
+        <div class="box-contacto">
+            <div class="box-1">
+                <img data-aos="zoom-in-right" class="contact-left" src="../images/contacto-01.png"
+                    alt="imagen backgroun contacto">
+            </div>
 
-                    <div class="formulario">
-                        <h3>Elegi el día y hora que mas te quede comodo</h3>
+            <form>
+                <label for="nombre"><i class="fa-solid fa-user"></i> Nombre:</label>
+                <input placeholder="Ingresa tu nombre" type="nombre" id="nombre">
 
+                <label for="email"><i class="fa-solid fa-envelope"></i> E-Mail:</label>
+                <input placeholder="Ingresa tu e-mail" type="email" id="email">
 
-                        <form action="submeter-formulario.php" method="post">
+                <label for="telefono"><i class="fa-solid fa-mobile"></i> Teléfono:</label>
+                <input placeholder="Ingresa tu teléfono" type="number" id="telefono">
 
+                <label for="ritmo"><i class="fa-solid fa-user-music"></i> Elige tu Clase:</label>
+                <select id="ritmo">
+                    <option value="stretching">Stretching</option>
+                    <option value="iniciacion">Iniciación a la Danza</option>
+                    <option value="entrenamiento">Entrenamiento Funcional</option>
+                    <option value="estilos">Estilos Contemporaneos</option>
+                </select>
 
-                            <p>
-                                <label for="nombre" class="colocar_nombre">Nombre
-                                    <span class="obligatorio">*</span>
-                                </label>
-                                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
-                                    placeholder="Escribe tu nombre">
-                            </p>
+                <h2><i class="fa-solid fa-calendar-days"></i> Elige el día y hora</h2>
+                
+                <label class="dia" for="dia">Lunes de 16:00 a 21:30 hs</label>
+                <input type="radio" name="dia">
+                <label class="dia" for="dia"> Miercoles de 16:00 a 21:30 hs</label>
+                <input  type="radio" name="dia">
+                <label class="dia" for="dia">Miercoles de 16:00 a 21:30 hs</label>
+                <input  type="radio" name="dia">
 
-                            <p>
-                                <label for="email" class="colocar_email">Email
-                                    <span class="obligatorio">*</span>
-                                </label>
-                                <input type="email" name="introducir_email" id="email" required="obligatorio"
-                                    placeholder="Escribe tu Email">
-                            </p>
-
-                            <p>
-                                <label for="telefone" class="colocar_telefono">Teléfono
-                                </label>
-                                <input type="tel" name="introducir_telefono" id="telefono"
-                                    placeholder="Escribe tu teléfono">
-                            </p>
-                                <label for="mensaje" class="colocar_mensaje">Mensaje
-                                    <span class="obligatorio">*</span>
-                                </label>
-                                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
-                                    required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
-                            </p>
-
-                            <button type="submit" name="enviar_formulario" id="enviar">
-                                <p>Enviar</p>
-                            </button>
-
-                            <p class="aviso">
-                                <span class="obligatorio"> * </span>los campos son obligatorios.
-                            </p>
-
-                        </form>
-                    </div>
-                </div>
+                <input  type="submit" id="enviar">
             </form>
-            <div data-aos="zoom-in-left" class="image2"></div>
+            <iframe id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425.93462640366755!2d-64.3367601254234!3d-31.34582517580118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d62103a42182d%3A0xe6b6a5bffbd787aa!2sAOMA%20-%20SECCIONAL%2028%20DE%20OCTUBRE!5e0!3m2!1ses-419!2sar!4v1682288125580!5m2!1ses-419!2sar"
+                width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         </div>
     </main>
 
+    <a class=up href="#"><i class="fa-solid fa-chevron-up"></i></a>
 
 
     <footer>
